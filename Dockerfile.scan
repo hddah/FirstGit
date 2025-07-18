@@ -1,0 +1,8 @@
+FROM alpine:latest
+
+RUN apk add --no-cache curl bash
+
+COPY scan.sh /scan.sh
+RUN chmod +x /scan.sh
+
+CMD ["/scan.sh"]
